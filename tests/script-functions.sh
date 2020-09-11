@@ -98,7 +98,7 @@ plugin_after_success() {
    GENERATE_LOCALES=false
    GENERATE_DOCS=false
    # for Travis CI
-   if echo "$TRAVIS_BRANCH" | grep -q -P '^(master|develop|support/|release/)'; then
+   if echo "$TRAVIS_BRANCH" | grep -q -P '^(feature/|master|develop|support/|release/)'; then
       GENERATE_LOCALES=true
       GENERATE_DOCS=true
       BUILD_BRANCH=$TRAVIS_BRANCH
